@@ -9,14 +9,13 @@ class Fap(client.Cog):
     def __init__(self, bot):
         self.b = bot
     
-    #@client.command(name="fuck arnold palmer", description="how dare you!?!?", help="just say 'fuck arnold palmer'")
     @client.Cog.listener()
     async def on_message(self, message):
-        if 'fuck arnold palmer' in message.content.lower() and not message.author.bot:
+        if 'fuck arnold palmer' in message.content.lower() and not message.author.bot:#checks if bot and if trigger is said
             async with message.channel.typing():
                 await asyncio.sleep(conf.type_speed)
             chosen = random.choice(choices)
-            if isinstance(chosen, str):
+            if isinstance(chosen, str):#sends choice as repective type
                 await message.channel.send(chosen)
             else:
                 await message.channel.send(embed=chosen)

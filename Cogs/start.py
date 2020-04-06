@@ -2,7 +2,7 @@ import discord, random, asyncio, chalk
 from discord.ext import commands as client
 from Cogs.config import conf
 
-class Start(client.Cog):
+class Start(client.Cog):#does the on_ready stuff
 
     def __init__(self, bot):
         self.b = bot
