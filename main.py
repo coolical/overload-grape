@@ -20,7 +20,4 @@ if __name__=='__main__': #loads every file with .py extension in Cogs folder
                     print('[ERROR] Failed to load Cog {name}')
                     print(traceback.format_exc())
                     continue
-print(os.environ['TOKEN'])
-print(str(os.environ['TOKEN']))
-print(isinstance(os.environ['TOKEN'], str))
-client.run(str(os.environ['TOKEN'])) # replace os.environ['TOKEN'] login via your token
+client.run(conf.token) # replace token in config to your token

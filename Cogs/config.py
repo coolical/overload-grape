@@ -1,7 +1,7 @@
 import os
 class conf():
     #where shared variables are
-    #token= str(os.environ['TOKEN'])
+    token= os.environ['TOKEN'] #replace os.environ['TOKEN'] with your token
     prefix1='ap_'
     prefix2='Ap_'
     name='Arnold Palmer'
