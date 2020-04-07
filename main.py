@@ -20,5 +20,5 @@ if __name__=='__main__': #loads every file with .py extension in Cogs folder
                     print('[ERROR] Failed to load Cog {name}')
                     print(traceback.format_exc())
                     continue
-
+print(os.environ['TOKEN'])
 client.run(conf.token) # Login via pur token inside of the config file
