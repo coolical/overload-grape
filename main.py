@@ -21,4 +21,4 @@ if __name__=='__main__': #loads every file with .py extension in Cogs folder
                     print(traceback.format_exc())
                     continue
 print(isinstance(os.environ['TOKEN'], str))
-client.run(conf.token) # Login via pur token inside of the config file
+client.run(conf.token) # Login via your token inside of the config file
