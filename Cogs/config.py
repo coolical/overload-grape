@@ -1,7 +1,11 @@
 import os
 class conf():
     #where shared variables are
+<<<<<<< HEAD
     token= os.environ('TOKEN')
+=======
+    token="token"
+>>>>>>> 599ad33aed51c6343db4a36d5cb1da1792ebfc54
     prefix1='ap_'
     prefix2='Ap_'
     name='Arnold Palmer'
