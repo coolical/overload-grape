@@ -1,6 +1,7 @@
+import os
 class conf():
     #where shared variables are
-    token="NTA5Mzk3ODQyOTcyOTAxMzg4.XdafKw.3mwwOW3QF-1r7gr43k24OnFRPcM"
+    token= os.environ('TOKEN')
     prefix1='ap_'
     prefix2='Ap_'
     name='Arnold Palmer'
