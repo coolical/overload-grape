@@ -19,7 +19,7 @@ class Help(client.Cog):
                 command = self.b.get_command(arg)
                 embed.add_field(name=command.name, value=command.help)
             except:
-                await ctx.send(f"{arg} is not a command. Maybe try without {conf.prefix1}?")
+                await ctx.send(f"<{arg}> is not a command. Maybe try without <{conf.prefix1}>?")
                 return
         await ctx.send(embed=embed)
     
