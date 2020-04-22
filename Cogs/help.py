@@ -5,10 +5,10 @@ from Cogs.config import conf
 class Help(client.Cog):
     def __init__(self, bot):
         self.b=bot
-    @client.command(name='help', description='displays help text for commands', help=f"'{conf.prefix1}help <command name>' or '{conf.prefix1}help'")
+    @client.command(name='help', description='Displays help text for commands', help=f"'{conf.prefix1}help <command name>' or '{conf.prefix1}help'")
     async def help(self,ctx,arg="NONE"):
         if arg=="NONE":#sends either general help or specified help
-            embed = discord.Embed(title="Help",description="Hello! I'm Arnold Palmer! Coolical dug up my dead body and injected my .chr file into discord! Here are the things I can do", color=conf.color)
+            embed = discord.Embed(title="Help",description="Hello! I'm Arnold Palmer! Coolical dug up my cold dead body and injected my .chr file into Discord! Here are the things I can do:", color=conf.color)
             for command in self.b.commands:
                 embed.add_field(name=f"{conf.prefix1}{command.name}", value=command.description)
             for trigger in conf.triggers:
