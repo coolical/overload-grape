@@ -6,7 +6,7 @@ discordPlaylistEmbed.add_field(name="Youtube Playlist: ", value="https://www.you
 discordPlaylistEmbed.add_field(name="Spotify Playlist: ", value="https://open.spotify.com/user/coolical/playlist/3d4iTU9IygolOxnQjjtwLE?si=HUCWDXQnTx-XAhu-uTdc4Q")
 discordPlaylistEmbed.add_field(name="Submission Form: ", value="https://goo.gl/forms/SBzO6tlR99fzPBJb2")
 discordPlaylistEmbed.add_field(name="Results: ", value="https://docs.google.com/spreadsheets/d/1yprWT1_eihGmfkwLQKFXztQ7yrF-UXYS5vmHjFyEypw/edit?usp=sharing")
-triggers = [{"name":"discord playlist", "reply": discordPlaylistEmbed, "description": "displays information related to discord playlist", "typeWait": False}]
+triggers = [{"name":"discord playlist", "reply": [discordPlaylistEmbed], "description": "displays information related to discord playlist", "typeWait": False}]
 for trigger in triggers:
     try:
         conf.triggers.append({trigger.name, trigger.description})
@@ -25,7 +25,6 @@ class Triggers(client.Cog):
                     async with message.channel.typing():
                         await asyncio.sleep(conf.type_speed)
                 chosen = random.choice(trigger['reply'])
-                print(chosen)
                 if isinstance(chosen, str):#sends choice as repective type
                     await message.channel.send(chosen)
                 else:
