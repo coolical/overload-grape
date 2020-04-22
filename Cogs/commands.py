@@ -11,7 +11,7 @@ class Commands(client.Cog):
     async def commands(self, ctx):
         e =discord.Embed(title="Commands", description="Here are all the commands/word/phrases you can use", color=conf.color)
         for command in self.b.commands:#iterates through command list and adds field with name and description
-            e.add_field(name=command.name, value=command.description)
+            e.add_field(name=f"{conf.prefix1}{command.name}", value=command.description)
         for trigger in conf.triggers:#iterates through triggers and adds field with name and description
             e.add_field(name=trigger["key"], value=trigger["value"])
         await ctx.send(embed=e)#sends as embed
