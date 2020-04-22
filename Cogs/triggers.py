@@ -23,11 +23,11 @@ class Triggers(client.Cog):
             if trigger['name'] in message.content.lower() and not message.author.bot:#checks if bot and if trigger is said
                 async with message.channel.typing():
                     await asyncio.sleep(conf.type_speed)
-                chosen = random.choice('choices')
+                chosen = random.choice(trigger['reply'])
                 if isinstance(chosen, str):#sends choice as repective type
-                    await message.channel.send(trigger['reply'])
+                    await message.channel.send(chosen)
                 else:
-                    await message.channel.send(embed=trigger['reply'])
+                    await message.channel.send(embed=chosen)
 
 def setup(bot):
     bot.add_cog(Triggers(bot))
