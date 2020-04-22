@@ -25,6 +25,7 @@ class Triggers(client.Cog):
                     async with message.channel.typing():
                         await asyncio.sleep(conf.type_speed)
                 chosen = random.choice(trigger['reply'])
+                print(chosen)
                 if isinstance(chosen, str):#sends choice as repective type
                     await message.channel.send(chosen)
                 else:
