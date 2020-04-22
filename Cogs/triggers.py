@@ -9,7 +9,7 @@ discordPlaylistEmbed.add_field(name="Results: ", value="https://docs.google.com/
 triggers = [{"name":"discord playlist", "reply": [discordPlaylistEmbed], "description": "displays information related to discord playlist", "typeWait": False}]
 for trigger in triggers:
     try:
-        conf.triggers.append({trigger[name], trigger[description]})
+        conf.triggers.append({"key":trigger[name], "value":trigger[description]})
     except:
         pass
 
