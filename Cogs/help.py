@@ -12,7 +12,7 @@ class Help(client.Cog):
             for command in self.b.commands:
                 embed.add_field(name=command.name, value=command.description)
             for trigger in conf.triggers:
-                embed.add_field(name=trigger["name"], value=trigger['description'])
+                embed.add_field(name=trigger["key"], value=trigger['value'])
         else:            
             try:
                 command = self.b.get_command(arg)
